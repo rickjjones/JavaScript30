@@ -83,7 +83,15 @@
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+    const transportation = data.reduce(function(obj, item){// accumulator, current item
+      if(!obj[item]){ // if the item is not in the accumulator 
+        obj[item] = 0;// add it and set it to 0
+      }
+      obj[item]++;// increment the value of the item. 
+      return obj;
+    },{})
+      console.log("transportation:");
+      console.table(transportation);
   </script>
 </body>
 </html>
